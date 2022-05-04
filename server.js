@@ -29,9 +29,7 @@ const db = knex({
   }
 });
 
-db.select('*').from('users').then(data=>{
-  //console.log(data);
-});
+
 
 
 app.post('/signin',(req,res)=>{ userSignIN(req,res,db,bcrypt) });
