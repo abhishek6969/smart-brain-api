@@ -37,9 +37,7 @@ db.select('*').from('users').then(data=>{
 app.post('/signin',(req,res)=>{ userSignIN(req,res,db,bcrypt) });
 app.post("/register",(req,res)=>{registerUser(req,res,db,bcrypt)});
 
-app.get('/',(req,res)=>{
-  res.send('Working')
-})
+app.get("/",(req,res)=>{res.send('Working')})
 
 app.get('/profile/:id',(req,res)=>{ getUserByID(req,res,db)});
 
