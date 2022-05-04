@@ -48,8 +48,8 @@ app.put("/image",(req,res)=>{ image(req,res,db) })//injecting dependencies
 
 app.post("/imageurl",handleAPI)
 
-app.listen(3000,()=>{
-  console.log("App running on 3000");
+app.listen(process.env.PORT || 3000,()=>{
+  console.log(`App running on ${process.env.PORT}`);
 });
 
 
